@@ -1,0 +1,232 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>impress.js | presentation tool based on the power of CSS3 transforms and transitions in modern browsers | by Bartek Szopka @bartaz</title>
+    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet' type='text/css'>
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    <link href="css/feedess.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <!-- Odometr includes -->
+    <link rel="stylesheet" href="http://github.hubspot.com/odometer/themes/odometer-theme-car.css" />
+    <script src="http://github.hubspot.com/odometer/odometer.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+</head>
+
+<!-- Extra styles for this example -->
+<style>
+.odometer {
+    font-size: 100px;
+}
+</style>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress" data-width="2200">
+
+    <div class="step" data-x="-11800" data-y="-850" data-scale="11">
+        <img src="img/ble.png" height="416" width="151" alt="">
+    </div>
+
+    <div class="step" data-x="-5200" data-y="-300" data-scale="4">
+        <q class="big">ee</q>
+    </div>
+
+    <div class="step green-feedes" data-x="5300" data-y="-300" data-scale="4">
+        <q class="big">es</q>
+    </div>
+
+    <div id="assiette" class="step assiette" data-scale="4">
+    </div>
+
+    <div id="tomates" class="step text-center final_hide" data-x="200" data-y="900" data-scale="1">
+        Combien&nbsp;touche&nbsp;le&nbsp;producteur 
+        par&nbsp;rapport&nbsp;au&nbsp;prix&nbsp;d'achat
+        de&nbsp;ces&nbsp;tomates&nbsp;?
+    </div>
+
+    <div id="olives" class="step text-center final_hide" data-x="-1550" data-y="250" data-z="-200" data-scale="1">
+        Où&nbsp;ces&nbsp;olives&nbsp;ont-elles&nbsp;été
+        cultivées,&nbsp;transformées,&nbsp;emballées&nbsp;?
+    </div>
+
+    <div id="fromage" class="step text-center final_hide" data-x="-1400" data-y="-700" data-z="-200" data-scale="1">
+        Quels&nbsp;sont&nbsp;les&nbsp;différents&nbsp;intermédiaires&nbsp;
+        intervenant&nbsp;dans&nbsp;la&nbsp;fabrication&nbsp;de&nbsp;ce&nbsp;fromage&nbsp;?
+    </div>
+
+    <div id="courgettes" class="step text-center final_hide" data-x="500" data-y="-1000" data-z="-200" data-scale="1">
+      Combien&nbsp;de&nbsp;kilomètres&nbsp;ont&nbsp;parcouru 
+      ces&nbsp;courgettes&nbsp;originaires&nbsp;de&nbsp;France&nbsp;?
+    </div>
+
+
+    <div id="saucisses" class="step text-center final_hide" data-z="-200" data-scale="1" data-x="1300">
+      Comment&nbsp;sont&nbsp;fabriquées&nbsp;ces&nbsp;saucisses&nbsp;?
+    </div>
+
+    <div id="lasagnes" class="step medium" data-x="2020" data-y="1100" data-rotate="-90">
+        <img height="470" src="img/lasagnes.png" />
+    </div> 
+
+    <div class="step medium-big" data-x="-10750" data-y="350" data-rotate="-90">
+        <p>MEFIANTS</p>
+    </div>
+
+    <div class="step medium-big final_hide" data-x="-10700" data-y="50" data-z="-3000" data-rotate="-90">
+        <img src="img/3.4.png" height="507" width="924" alt="">
+    </div> 
+
+    <div class="step medium-big" data-x="-9470" data-y="-800">
+        <p>INQUIETS</p>
+    </div>
+
+    <div class="step medium-big final_hide" data-x="-10820" data-y="-800" data-z="-3000">
+        <img src="img/7.10.png" height="953" width="1177" alt="">
+    </div> 
+
+    <div class="step medium-big" data-x="-10750" data-y="-1800" data-rotate="-90">
+        <p>CONFUS</p>
+    </div>
+
+    <div class="step medium-big final_hide" data-x="-10750" data-y="-500" data-z="-3000" data-rotate="-90">
+        <img src="img/57.100.png" height="953" width="1177" alt="">
+    </div> 
+
+    <div class="step medium-big" data-x="-9630" data-y="-2930">
+        <p>EXIGEANTS</p>
+    </div>  
+
+    <div class="step" data-x="2050" data-y="-1825" data-rotate="-90">
+        <img src="img/trust.jpg" />
+    </div>
+
+    <div class="step center final_hide" data-x="-9950" data-y="-1800" data-z="-15000" data-scale="2">
+        <iframe width="1920" height="1080" src="http://feedes.fr/viandes/4"></iframe>
+    </div>
+
+    <div id="overview" class="step" data-x="-2000" data-y="-800" data-scale="12" >
+    </div>
+
+    <div class="step center final_hide" data-x="-9950" data-y="0" data-z="-15000" data-rotate-y="90" data-scale="12">
+        <img src="img/feedes_logo.jpg" width="1600" alt="">
+    </div>
+
+</div>
+
+<!--
+    
+    Hint is not related to impress.js in any way.
+    
+    But it can show you how to use impress.js features in creative way.
+    
+    When the presentation step is shown (selected) its element gets the class of "active" and the body element
+    gets the class based on active step id `impress-on-ID` (where ID is the step's id)... It may not be
+    so clear because of all these "ids" in previous sentence, so for example when the first step (the one with
+    the id of `bored`) is active, body element gets a class of `impress-on-bored`.
+    
+    This class is used by this hint below. Check CSS file to see how it's shown with delayed CSS animation when
+    the first step of presentation is visible for a couple of seconds.
+    
+    ...
+    
+    And when it comes to this piece of JavaScript below ... kids, don't do this at home ;)
+    It's just a quick and dirty workaround to get different hint text for touch devices.
+    In a real world it should be at least placed in separate JS file ... and the touch content should be
+    probably just hidden somewhere in HTML - not hard-coded in the script.
+    
+    Just sayin' ;)
+    
+-->
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+
+    function randomIntFromInterval(min,max) {
+        return Math.floor(Math.random()*(max-min+1)+min);
+    }
+
+    var el = document.querySelector('.myOdometer');
+    od = new Odometer({
+      el: el,
+      value: 0,
+
+      // Any option (other than auto and selector) can be passed in here
+      format: 'd'
+    });
+
+    $("div[data-z='-15000'").hide();
+    $("div[data-z='-5000'").hide();
+
+    $(document).on('impress:stepenter', function(e) {
+        var currentSlide = $(e.target).attr('id');
+        var currentSlideClass = $(e.target).attr('class');
+
+        if (currentSlide === 'step-19') {
+            myInterval = setInterval(function(){
+                var nb = randomIntFromInterval(2000, 4000);
+                
+                if(od.value  + nb > 10000){
+                    clearInterval(myInterval);
+                } else {
+                    od.update(od.value + nb);
+                }
+            }, 7000);
+        } else if(currentSlide === 'step-30'){
+            impress().goto(30);
+        } else if(currentSlide === 'slideTransparence') {
+          $("div[data-z='-15000'").show();
+          $("div[data-z='-5000'").show();
+        }
+
+        if(currentSlideClass.indexOf("chartSlide") > -1){
+          $('h3', e.target).fadeTo('fast', 1);
+          $(".chartSlide").not(e.target).fadeTo('fast', 0.1);
+        }
+    });
+
+    $(document).on('impress:stepleave', function(e) {
+      var currentSlide = $(e.target).attr('id');
+      var currentSlideClass = $(e.target).attr('class');
+
+      if(currentSlideClass.indexOf("chartSlide") > -1){
+        $('h3', e.target).fadeTo('fast', 0);
+        $(".chartSlide").fadeTo('fast', 1);
+      }
+
+      if(currentSlide === 'lastSlide'){
+          $(".hide-overview").fadeTo('fast', 0);
+      }
+    });
+
+
+
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
+
