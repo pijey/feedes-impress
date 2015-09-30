@@ -1,4 +1,12 @@
+.logo {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+}
 
+.capture {
+
+}
 
 .assiette {   
 	width: 1100px;

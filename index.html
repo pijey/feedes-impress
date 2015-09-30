@@ -39,6 +39,10 @@
     <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
 </div>
 
+<div class="logo">
+    <img src="img/feedes_logo.jpg" width="150" alt="">
+</div>
+
 <div id="impress" data-width="2200">
 
     <div class="step" data-x="-11800" data-y="-850" data-scale="11">
@@ -118,8 +122,21 @@
         <img src="img/trust.jpg" />
     </div>
 
-    <div class="step center final_hide" data-x="-9950" data-y="-1800" data-z="-15000" data-scale="2">
-        <iframe width="1920" height="1080" src="http://feedes.fr/viandes/4"></iframe>
+    <div id="capture1" class="step center final_hide" data-x="-9950" data-y="-1800" data-z="-15000" data-scale="2">
+        <!-- <iframe width="1920" height="1080" src="http://feedes.fr/viandes/4"></iframe> -->
+        <img width="2000" src="img/capture.png"></iframe>
+    </div>
+    <div id="capture2" class="step center final_hide" data-x="-9950" data-y="-1800" data-z="-15000" data-scale="2">
+        <!-- <iframe width="1920" height="1080" src="http://feedes.fr/viandes/4"></iframe> -->
+        <img width="2000" src="img/origine2.png"></iframe>
+    </div>
+    <div id="capture3" class="step center final_hide" data-x="-9950" data-y="-836" data-z="-15000" data-scale="2">
+        <!-- <iframe width="1920" height="1080" src="http://feedes.fr/viandes/4"></iframe> -->
+        <img width="2000" src="img/fabrication2.png"></iframe>
+    </div>
+    <div id="capture4" class="step center final_hide" data-x="-9950" data-y="350" data-z="-15000" data-scale="2">
+        <!-- <iframe width="1920" height="1080" src="http://feedes.fr/viandes/4"></iframe> -->
+        <img width="2000" src="img/distribution2.png"></iframe>
     </div>
 
     <div id="overview" class="step" data-x="-2000" data-y="-800" data-scale="12" >
@@ -160,68 +177,28 @@
 </div>
 <script>
 
-    function randomIntFromInterval(min,max) {
-        return Math.floor(Math.random()*(max-min+1)+min);
-    }
-
-    var el = document.querySelector('.myOdometer');
-    od = new Odometer({
-      el: el,
-      value: 0,
-
-      // Any option (other than auto and selector) can be passed in here
-      format: 'd'
-    });
-
-    $("div[data-z='-15000'").hide();
-    $("div[data-z='-5000'").hide();
-
-    $(document).on('impress:stepenter', function(e) {
+    $(document).on('impress:stepleave', function(e) {
         var currentSlide = $(e.target).attr('id');
         var currentSlideClass = $(e.target).attr('class');
 
-        if (currentSlide === 'step-19') {
-            myInterval = setInterval(function(){
-                var nb = randomIntFromInterval(2000, 4000);
-                
-                if(od.value  + nb > 10000){
-                    clearInterval(myInterval);
-                } else {
-                    od.update(od.value + nb);
-                }
-            }, 7000);
-        } else if(currentSlide === 'step-30'){
-            impress().goto(30);
-        } else if(currentSlide === 'slideTransparence') {
-          $("div[data-z='-15000'").show();
-          $("div[data-z='-5000'").show();
-        }
-
-        if(currentSlideClass.indexOf("chartSlide") > -1){
-          $('h3', e.target).fadeTo('fast', 1);
-          $(".chartSlide").not(e.target).fadeTo('fast', 0.1);
-        }
+        if (currentSlide === 'capture4') {
+           $(".logo").fadeTo('fast', 0);
+       }
     });
 
-    $(document).on('impress:stepleave', function(e) {
-      var currentSlide = $(e.target).attr('id');
-      var currentSlideClass = $(e.target).attr('class');
+    // $(document).on('impress:stepleave', function(e) {
+    //     var currentSlide = $(e.target).attr('id');
+    //     var currentSlideClass = $(e.target).attr('class');
 
-      if(currentSlideClass.indexOf("chartSlide") > -1){
-        $('h3', e.target).fadeTo('fast', 0);
-        $(".chartSlide").fadeTo('fast', 1);
-      }
+    //     if (currentSlide === 'capture1') {
+    //        $("#capture2").addClass('capture');
+    //    }
+    //    if (currentSlide === 'capture3') {
+    //        $("#capture2").removeClass('capture');
+    //        $("#capture3").addClass('capture');
+    //    }
+    // });
 
-      if(currentSlide === 'lastSlide'){
-          $(".hide-overview").fadeTo('fast', 0);
-      }
-    });
-
-
-
-if ("ontouchstart" in document.documentElement) { 
-    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
-}
 </script>
 
 <script src="js/impress.js"></script>
